@@ -1,3 +1,6 @@
+import random
+
+
 class AI:
 
     def __init__(self):
@@ -5,4 +8,7 @@ class AI:
 
 
     def display_choice(self):
-        pass 
+        ai_choice= random.choice(self.choice_list)
+        print(f" AI has chosen {ai_choice}")
+
+    
