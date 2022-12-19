@@ -54,9 +54,48 @@ class Single_Player(Game):
 
             player_1=Person()
             player_2=AI()
+
             while win_1 <2 and win_2 <2:
                 hand_1=player_1.display_choice()
                 hand_2= player_2.display_choice()
+                if hand_1 == "ROCK" and (hand_2 == "SCISSORS" or hand_2 == "LIZARD"):
+                    win_1 += 1 
+                    print("Player 1 wins!")
+                elif hand_1 == "PAPER" and (hand_2 == "ROCK" or hand_2 == "SPOCK"):
+                    win_1 += 1
+                    print("Player 1 wins!")
+                elif hand_1 == "SCISSORS" and (hand_2 == "PAPER" or hand_2 == "LIZARD"):
+                    win_1 += 1
+                    print("Player 1 wins!")
+                elif hand_1 == "LIZARD" and (hand_2 == "PAPER" or hand_2 == "SPOCK"):
+                    win_1 += 1
+                    print("Player 1 wins!")
+                elif hand_1 == "SPOCK" and (hand_2 == "ROCK" or hand_2 == "SCISSORS"):
+                    win_1 += 1
+                    print("Player 1 wins!")
+                elif hand_2 == "ROCK" and (hand_1 == "SCISSORS" or hand_1 == "LIZARD"):
+                    win_2 += 1 
+                    print("Player 2 wins!")
+                elif hand_2 == "PAPER" and (hand_1 == "ROCK" or hand_1 == "SPOCK"):
+                    win_2 += 1
+                    print("Player 2 wins!")
+                elif hand_2 == "SCISSORS" and (hand_1 == "PAPER" or hand_1 == "LIZARD"):
+                    win_2 += 1
+                    print("Player 2 wins!")
+                elif hand_2 == "LIZARD" and (hand_1 == "PAPER" or hand_1 == "SPOCK"):
+                    win_2 += 1
+                    print("Player 2 wins!")
+                elif hand_2 == "SPOCK" and (hand_1 == "ROCK" or hand_1 == "SCISSORS"):
+                    win_2 += 1
+                    print("Player 2 wins!")
+                else:
+                    print("tie tie")
+            
+            if win_1 == 2:
+                return "Player 1 is the winner, Chicken Dinner!"
+            else:
+                return "Player 2 is the winner, Player 1 is a sore loser!"
+                
                 
 
 
@@ -68,5 +107,47 @@ class Multiplayer(Game):
             win_2=0
 
             player_1=Person()
-            Player_2=Person()
+            player_2=Person()
 
+            while win_1 <2 and win_2 <2:
+                hand_1=player_1.display_choice()
+                hand_2=player_2.display_choice()
+                if hand_1 == "ROCK" and (hand_2 == "SCISSORS" or hand_2 == "LIZARD"):
+                    win_1 += 1 
+                    print("Player 1 wins!")
+                elif hand_1 == "PAPER" and (hand_2 == "ROCK" or hand_2 == "SPOCK"):
+                    win_1 += 1
+                    print("Player 1 wins!")
+                elif hand_1 == "SCISSORS" and (hand_2 == "PAPER" or hand_2 == "LIZARD"):
+                    win_1 += 1
+                    print("Player 1 wins!")
+                elif hand_1 == "LIZARD" and (hand_2 == "PAPER" or hand_2 == "SPOCK"):
+                    win_1 += 1
+                    print("Player 1 wins!")
+                elif hand_1 == "SPOCK" and (hand_2 == "ROCK" or hand_2 == "SCISSORS"):
+                    win_1 += 1
+                    print("Player 1 wins!")
+                elif hand_2 == "ROCK" and (hand_1 == "SCISSORS" or hand_1 == "LIZARD"):
+                    win_2 += 1 
+                    print("Player 2 wins!")
+                elif hand_2 == "PAPER" and (hand_1 == "ROCK" or hand_1 == "SPOCK"):
+                    win_2 += 1
+                    print("Player 2 wins!")
+                elif hand_2 == "SCISSORS" and (hand_1 == "PAPER" or hand_1 == "LIZARD"):
+                    win_2 += 1
+                    print("Player 2 wins!")
+                elif hand_2 == "LIZARD" and (hand_1 == "PAPER" or hand_1 == "SPOCK"):
+                    win_2 += 1
+                    print("Player 2 wins!")
+                elif hand_2 == "SPOCK" and (hand_1 == "ROCK" or hand_1 == "SCISSORS"):
+                    win_2 += 1
+                    print("Player 2 wins!")
+                else:
+                    print("tie tie")
+            
+            if win_1 == 2:
+                return "Player 1 is the winner, Chicken Dinner!"
+            else:
+                return "Player 2 is the winner, Player 1 is a sore loser!"
+                
+                

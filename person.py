@@ -13,7 +13,12 @@ class Person:
         print("Choose 3 for LIZARD")
         print("Choose 4 for SPOCK")
 
-        self.person_choice= input("Choose your Gesture")
+        self.person_choice= input("Choose your Gesture.")
 
-        print(self.choice_list[int(self.person_choice)])
+        while self.person_choice not in ('0','1','2','3','4'):
+         self.person_choice= input("Choose your Gesture")   
+
+        
+
+        print(f" Player has chosen {self.choice_list[int(self.person_choice)]}")
         return self.choice_list[int(self.person_choice)]    
