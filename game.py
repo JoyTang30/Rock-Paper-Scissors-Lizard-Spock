@@ -54,8 +54,10 @@ class Single_Player(Game):
 
             player_1=Person()
             player_2=AI()
-            while player_1.display_choice >2 and player_2.display_choice >2:
-                player_1.display_choice=
+            while win_1 <2 and win_2 <2:
+                hand_1=player_1.display_choice()
+                hand_2= player_2.display_choice()
+                
 
 
 class Multiplayer(Game):
