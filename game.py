@@ -7,11 +7,11 @@ class Game:
         self.players= ' '
 
     def start_game(self):
-        print("Welcome to ROCK, PAPER, SCISSORS, LIZARD, SPOCK Game")
+        print("Welcome to ROCK, PAPER, SCISSORS, LIZARD, SPOCK Game!")
         print(" ")
-        print( "each match will be best of three")
+        print("each match will be best of three!")
         time.sleep(3)
-        self.players= input("How many are playing? input 1 or 2:")
+        self.players= input("How many players? input 1 or 2:")
 
         while self.players != "1" and self.players != "2":
             self.players= input("How many are playing? input 1 or 2:")

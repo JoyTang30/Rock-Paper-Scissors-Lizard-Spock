@@ -16,7 +16,7 @@ class Person:
         self.person_choice= input("Choose your Gesture.")
 
         while self.person_choice not in ('0','1','2','3','4'):
-         self.person_choice= input("Choose your Gesture")   
+         self.person_choice= input("Choose your Gesture.")   
 
         
 
