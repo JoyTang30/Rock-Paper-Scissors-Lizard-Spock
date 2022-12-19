@@ -2,6 +2,8 @@ from game import Game
 from person import Person
 test = Game()
 
+test.run_game()
+
 #test.start_game()
 #test.play_game()
 

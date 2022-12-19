@@ -20,5 +20,5 @@ class Person:
 
         
 
-        print(f" Player has chosen {self.choice_list[int(self.person_choice)]}")
+        print(f"Player has chosen {self.choice_list[int(self.person_choice)]}")
         return self.choice_list[int(self.person_choice)]    

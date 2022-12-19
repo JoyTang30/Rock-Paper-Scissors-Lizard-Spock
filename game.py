@@ -5,12 +5,13 @@ import time
 class Game:
     def __init__(self):
         self.players= ' '
+        self.winner = ''
 
     def start_game(self):
         print("Welcome to ROCK, PAPER, SCISSORS, LIZARD, SPOCK Game!")
         print(" ")
         print("each match will be best of three!")
-        time.sleep(3)
+        time.sleep(1)
         self.players= input("How many players? input 1 or 2:")
 
         while self.players != "1" and self.players != "2":
@@ -28,7 +29,7 @@ class Game:
         print("Lizard eats Paper")
         print("Paper disproves Spock")
         print("Spock vaporizes Rock")
-        time.sleep(3)
+        time.sleep(1)
 
 
 
@@ -38,10 +39,20 @@ class Game:
         pass
 
     def display_winner(self):
-        pass
+        print(self.winner)
 
     def run_game(self):
-        pass
+       self.start_game()
+       if self.players == '1':
+            Singles = Single_Player()
+            self.winner = Singles.play_game()
+            self.display_winner()
+       else:
+            Doubles = Multiplayer()
+            self.winner = Doubles.play_game()
+            self.display_winner()
+
+
 
 
 class Single_Player(Game):
@@ -90,6 +101,8 @@ class Single_Player(Game):
                     print("Player 2 wins!")
                 else:
                     print("tie tie")
+            
+                print(f'Player 1 has {win_1} wins. Player 2/AI has {win_2} wins.')
             
             if win_1 == 2:
                 return "Player 1 is the winner, Chicken Dinner!"
@@ -144,6 +157,8 @@ class Multiplayer(Game):
                     print("Player 2 wins!")
                 else:
                     print("tie tie")
+
+                print(f'Player 1 has {win_1} wins. Player 2 has {win_2} wins.')
             
             if win_1 == 2:
                 return "Player 1 is the winner, Chicken Dinner!"
