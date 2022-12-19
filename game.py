@@ -100,7 +100,7 @@ class Single_Player(Game):
                     win_2 += 1
                     print("Player 2 wins!")
                 else:
-                    print("tie tie")
+                    print("tie tie!")
             
                 print(f'Player 1 has {win_1} wins. Player 2/AI has {win_2} wins.')
             
@@ -156,7 +156,7 @@ class Multiplayer(Game):
                     win_2 += 1
                     print("Player 2 wins!")
                 else:
-                    print("tie tie")
+                    print("tie tie!")
 
                 print(f'Player 1 has {win_1} wins. Player 2 has {win_2} wins.')
             
